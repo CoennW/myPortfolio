@@ -1,0 +1,320 @@
+/* Styles */
+
+html,
+body {
+    font-family: 'Ubuntu', sans-serif;
+
+    color: white;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+
+a {
+    color: white;
+}
+
+* {
+    margin: 0;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.content {
+    height: 100%;
+    min-height: 100%;
+
+    /*for mozilla*/
+}
+
+.top-bar {
+    position: fixed;
+    background: #7f7f7f;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;
+}
+
+.top-bar h1 {
+    float: left;
+    margin-left: 5%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+nav {
+    float: right;
+    margin-right: 5%;
+    margin-top: 30px;
+
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+a:visited {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+html > body .content {
+    height: auto;
+    
+    
+}
+
+/*Articles class set up */
+
+.title {
+
+    height: auto;
+    width: 65%;
+    margin-left: 15%;
+    margin-right: 20%;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    
+}
+
+.article-bg {
+    overflow: hidden;
+    height: auto;
+    width: auto;
+    max-width: 36em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    background: white;
+
+}
+
+.article {
+    line-height: 1.2em;
+    overflow: hidden;
+    background: white;
+    width: auto;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: auto;
+}
+
+.article h2,
+p {
+
+    padding: 10px;
+    color: black
+}
+
+
+
+/* First page with links to my subjects */
+
+main {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom right, #319CDA, #29179A);
+}
+
+#one {
+    /*background: linear-gradient(to bottom right, #319CDA, #29179A);*/
+    
+    /*animation*/
+    background-size: 100% 100%;
+    animation: gradientAnimation 25s ease infinite; 
+    
+}
+
+@keyframes  gradientAnimation{
+    0% {
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+#one .nav-vakken {
+    padding-top: 175px;
+    margin-left: 5%;
+    margin-right: 50%;
+}
+
+#one .nav-vakken a:nth-child(3) {
+    margin-top: 40px;
+}
+
+
+#one a {
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    margin-top: 100px;
+    font-size: 24px;
+    border-bottom: 3px solid white;
+}
+
+.nav-vakken #semesters {
+    
+    display: inline;
+    color: white;
+    font-weight: 400;
+    border-bottom: 0px solid white;
+    font-size: 16px;
+    
+    
+}
+
+
+/* Second page with content */
+
+#two {
+    overflow: hidden;
+    background: linear-gradient(132deg, #EE3D2A, #121597);
+    
+    
+}
+
+
+
+#three {
+    overflow: hidden;
+    
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+#four {
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+}
+
+#five {
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #0ba360, #3cba92);
+}
+
+
+/*Media Queries*/
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .title {
+
+    height: auto;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    
+}
+    
+
+    
+    .article-bg {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 0px;
+    }
+
+    #one a {
+
+        font-weight: 700;
+        display: block;
+        margin-top: 40px;
+        font-size: 24px;
+
+    }
+    #one .nav-vakken {
+        padding-top: 175px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .top-bar h1 {
+
+
+
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .article {
+        max-width: auto;
+        line-height: 1.5;
+    }
+
+
+}
+*/
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .article-bg {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .article-bg {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .article-bg {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .article-bg {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+} 
