@@ -26,7 +26,7 @@ img {
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .content {
@@ -80,8 +80,8 @@ nav a:hover {
 
 html > body .content {
     height: auto;
-    
-    
+
+
 }
 
 /*Articles class set up */
@@ -95,7 +95,7 @@ html > body .content {
     padding-top: 40px;
     padding-bottom: 10px;
     border-bottom: 3px solid white;
-    
+
 }
 
 .article-bg {
@@ -131,32 +131,26 @@ p {
 }
 
 
-
 /* First page with links to my subjects */
 
-main {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to bottom right, #319CDA, #29179A);
-}
-
 #one {
-    /*background: linear-gradient(to bottom right, #319CDA, #29179A);*/
+    overflow: hidden;
     
+    background: linear-gradient(to bottom right, #319CDA 0%, #29179A 100%);
     /*animation*/
-    background-size: 100% 100%;
-    animation: gradientAnimation 25s ease infinite; 
-    
+    background-size: 400% 100%;
+    animation: gradientAnimation 20s ease infinite;
+
 }
 
-@keyframes  gradientAnimation{
+@keyframes gradientAnimation {
     0% {
         background-position: 0% 50%;
     }
-    50%{
+    50% {
         background-position: 100% 50%;
     }
-    100%{
+    100% {
         background-position: 0% 50%;
     }
 }
@@ -182,14 +176,14 @@ main {
 }
 
 .nav-vakken #semesters {
-    
+
     display: inline;
     color: white;
     font-weight: 400;
     border-bottom: 0px solid white;
     font-size: 16px;
-    
-    
+
+
 }
 
 
@@ -198,15 +192,23 @@ main {
 #two {
     overflow: hidden;
     background: linear-gradient(132deg, #EE3D2A, #121597);
+
+
+}
+
+.bg-opacity{
+    width: 100%;
+    height: 100vh;
     
     
+    background-color: rgba(255, 0, 0, 0,25);
 }
 
 
 
 #three {
     overflow: hidden;
-    
+
     background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
 }
 
@@ -228,19 +230,19 @@ main {
 @media only screen and (max-width: 600px) {
     .title {
 
-    height: auto;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 20px;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid white;
-    
-}
-    
+        height: auto;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        padding-top: 40px;
+        padding-bottom: 10px;
+        border-bottom: 3px solid white;
 
-    
+    }
+
+
+
     .article-bg {
         width: 100%;
         margin-left: 0%;
@@ -278,6 +280,7 @@ main {
 
 
 }
+
 */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
@@ -317,4 +320,4 @@ main {
         margin-left: 20%;
         margin-right: 20%;
     }
-} 
+}
