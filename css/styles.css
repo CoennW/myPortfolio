@@ -36,7 +36,7 @@ img {
     height: 100%;
     
 
-    /*for mozilla*/
+    
 }
 
 .content #bg-opacity {
@@ -47,11 +47,28 @@ img {
     
 }
 
-.content #bg-opacity:hover  {
+.content #bg-opacity:hover   {
     animation: anchorAnimationIn ease 0.5s;
     background-color: rgba(0, 0, 0, 0.4);
     
-}
+    }
+
+.content #bg-opacity:hover >  .article-bg  {
+        
+    animation: articleBrightnessIn ease 0.5s;
+    animation-fill-mode: forwards;
+    filter: brightness(0.6s);
+    
+    }
+
+.content #bg-opacity:hover >  .title  {
+    filter: brightness(0.6);
+    animation: articleBrightnessIn ease 0.5s;
+    animation-fill-mode: forwards;
+        
+      
+     }
+
 
 /* OLD OLD OLD 
 .top-bar {
@@ -116,6 +133,7 @@ html > body .content {
     padding-top: 40px;
     padding-bottom: 10px;
     border-bottom: 3px solid white;
+    
 
 
 
@@ -137,12 +155,13 @@ html > body .content {
 
 }
 
+
+
 .title, .article-bg{
+    filter: brightness(0.6);
+    animation: articleBrightnessOut ease 1s;
     
-    filter: brightness(0.5);
 }
-
-
 
 
 
@@ -246,6 +265,24 @@ p {
 
 
 /* Animation Code */
+
+@keyframes articleBrightnessIn {
+    0{
+        filter: brightness(0.6);
+    }
+    100%{
+        filter: brightness(1);
+    }
+}
+
+@keyframes articleBrightnessOut {
+    0{
+        filter: brightness(1);
+    }
+    100%{
+        filter: brightness(0.6);
+    }
+}
 
 @keyframes anchorAnimationIn {
     0%{
