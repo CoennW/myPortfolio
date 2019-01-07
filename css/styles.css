@@ -10,13 +10,27 @@ body {
 
 }
 
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
 a {
     color: white;
 }
 
+
 * {
     margin: 0;
 
+}
+
+h2 {
+
+    font-weight: 700;
+}
+ul{
+    color: black;
 }
 
 img {
@@ -27,6 +41,8 @@ img {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
 
 }
 
@@ -173,17 +189,18 @@ html > body .content {
     height: auto;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     max-width: auto;
 
 }
 
 .article h2,
-p {
+p, .linkText {
 
     padding: 10px;
     color: black
+
 }
 
 
