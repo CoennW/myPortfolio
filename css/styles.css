@@ -44,6 +44,7 @@ img {
     padding: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 
 }
 
@@ -226,9 +227,8 @@ html > body .content {
 .wrapper {
 
     margin-left: 5%;
-    margin-top: 10%;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: inline-block;
 
 }
@@ -241,6 +241,10 @@ html > body .content {
     width: 50%;
     height: auto;
     display: inline-block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     
 }
 
@@ -250,13 +254,14 @@ html > body .content {
     width: 300px;
     height: auto;
     float: right;
-    margin-top: 100px;
+    margin-top: 20px;
     margin-left: 40%;
     color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     opacity: 0;
-    visibility: hidden;
+    
    
     
    

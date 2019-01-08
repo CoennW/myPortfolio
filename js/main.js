@@ -1,10 +1,16 @@
 $(document).ready(function () {
+    
+    
+    $(".box").css("margin-left", "0%");
+    $(".box").css("opacity", "0");
+    $(".box").css("height", "0");
+    $(".box").css("width", "0");
 
-    console.log('ja');
+    
     $('img').each(function () {
 
-
-
+        
+        
         $(this).wrap($('<a/>', {
             href: $(this).attr('src'),
             'data-fancybox': 'gallery',
@@ -83,40 +89,40 @@ $(document).ready(function () {
 
 
             $(".box").append("<p>" + rubrics["0"].rubrics.concept) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Brainstorming, visuele uitwerkingen voor D'n Blije Druktebelever" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Brainstorming, visuele uitwerkingen voor D'n Blije Druktebelever" + "</p>" );
 
-            $(".box").append("<p>" + rubrics["1"].rubrics.tests) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Concepttesting en User Experience testing voor de Heatmap" + "</p>");
+            $(".box").append('<p>' + rubrics["1"].rubrics.tests) + "</p>";
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Concepttesting en User Experience testing voor de Heatmap" + "</p>");
 
             $(".box").append("<p>" + rubrics["1"].rubrics.story) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Animeren om het concept aan de gebruiker te vertellen" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Animeren om het concept aan de gebruiker te vertellen" + "</p>");
 
             $(".box").append("<p>" + rubrics["2"].rubrics.audio) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Animatie en geluid komen samen in conceptanimaties" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Animatie en geluid komen samen in conceptanimaties" + "</p>");
 
             $(".box").append("<p>" + rubrics["3"].rubrics.onderzoek) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Onderzoeksmethodes gebruiken voor nieuwe inzichten" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Onderzoeksmethodes gebruiken voor nieuwe inzichten" + "</p>");
 
             $(".box").append("<p>" + rubrics["3"].rubrics.houding) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Reflecteren en het presenteren van mijn werk" + "</p>");
+            $(".box").append('<p style = "font-size:13px; padding-top: 0px;">' + "Reflecteren en het presenteren van mijn werk" + "</p>");
 
         }
         if (this.id == 'brandguide') {
             //console.log('id is brandguide!');
             $(".box").append("<p>" + rubrics["0"].rubrics.concept) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Vanuit een concept, missie en visie designen" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Vanuit een concept, missie en visie designen" + "</p>");
 
             $(".box").append("<p>" + rubrics["0"].rubrics.visie) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Professionele visies bekeken en deze toegepast in de brandguide" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Professionele visies bekeken en deze toegepast in de brandguide" + "</p>");
 
             $(".box").append("<p>" + rubrics["1"].rubrics.tests) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Doelgroep onderzoek doen en de gebruiker leren kennen" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Doelgroep onderzoek doen en de gebruiker leren kennen" + "</p>");
 
             $(".box").append("<p>" + rubrics["1"].rubrics.story) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Nadenken over de story van een introductie film" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Nadenken over de story van een introductie film" + "</p>");
 
             $(".box").append("<p>" + rubrics["3"].rubrics.onderzoek) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Onderzoeksmethodes gebruiken voor nieuwe inzichten" + "</p>");
+            $(".box").append('<p style = "font-size:13px; padding-top: 0px;">' + "Onderzoeksmethodes gebruiken voor nieuwe inzichten" + "</p>");
 
 
 
@@ -125,37 +131,49 @@ $(document).ready(function () {
         if (this.id == 'aardgas') {
 
             $(".box").append("<p>" + rubrics["2"].rubrics.data) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Data en cijfers interactief visualiseren" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:12px; padding-top: 0px;">' + "Data en cijfers interactief visualiseren" + "</p>");
 
             $(".box").append("<p>" + rubrics["2"].rubrics.programmeren) + "</p>";
-            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Datasets uitlezen en deze met programmeren gebruiken" + "</p>");
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:12px; padding-top: 0px;">' + "Datasets uitlezen en deze met programmeren gebruiken" + "</p>");
 
-
+            
 
         }
 
 
-
-
-        $(".box").css("visibility", "visible");
-
-        $(".box").fadeTo(100, 1, function () {
-            // Animation complete.
+       
+        $(".box").css("height", "auto");
+        $(".box").css("width", "auto");
+        $(".box").css("margin-left", "30%");
+          
+        $(".box").animate({marginLeft: "35%", opacity: "1", width: "auto"}, 100, "swing", function(){
+              
+              
+          });
+       // $(".box").fadeTo(100, 1);
+        
+      
         });
-
-
-
-
-    });
 
 
     $('#one a').mouseleave(function () {
         console.log(this.id);
-
-        $(".box").fadeTo(100, 0, function () {
-            $(".box").css("visibility", "hidden");
+        $(".box").animate({marginLeft: "37%", opacity: "0"}, 100, function(){
             $(".box").empty();
+            $(".box").css("margin-left", "0");
+            $(".box").css("height", "0");
+            $(".box").css("width", "0");
+            
+            
         });
+        
+      /*  $(".box").fadeTo(100, 0,function(){
+            $(".box").empty();
+            
+        });*/
+        
+        
+        
     });
 
 
