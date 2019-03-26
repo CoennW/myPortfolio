@@ -1,16 +1,50 @@
 $(document).ready(function () {
-    
-    
+
+
     $(".box").css("margin-left", "0%");
     $(".box").css("opacity", "0");
     $(".box").css("height", "0");
     $(".box").css("width", "0");
 
-    
+
+    //toggle fullscreen 
+    function toggleFullScreen() {
+        if (!document.fullscreenElement && // alternative standard method
+            !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) { // current working methods
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) {
+                document.documentElement.msRequestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+            $('#fullscreen').html("Exit");
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.msExitFullscreen) {
+                document.msExitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+            $('#fullscreen').html("Go Fullscreen");
+        }
+    }
+
+    $('#fullscreen').click(function () {
+        toggleFullScreen();
+    });
+
+
+    //add fancybox to each img element 
     $('img').each(function () {
 
-        
-        
+
+
         $(this).wrap($('<a/>', {
             href: $(this).attr('src'),
             'data-fancybox': 'gallery',
@@ -21,7 +55,7 @@ $(document).ready(function () {
 
 
 
-
+    //fancybox porperties 
     $('[data-fancybox="gallery"]').fancybox({
         arrows: false,
         toolbar: true,
@@ -30,10 +64,12 @@ $(document).ready(function () {
     });
 
 
+    //Tilt library properties 
     $('.js-tilt').tilt({
         reset: false
     });
 
+    //Get the box(rubrics information when mouse on link) on the right place 
     $(document).bind('mousemove', function (e) {
         $('.box').css({
             top: e.pageY - $(".box").height() / 2, // just minus by half the height
@@ -43,7 +79,7 @@ $(document).ready(function () {
 
 
 
-
+    //Data for the box information when hovering over a title link (this is a json practice)
     var rubrics = [
         {
             titel: "Strategie en Concept",
@@ -76,7 +112,7 @@ $(document).ready(function () {
 
 
 
-
+    //creating DOM elements that are added to the .box
     $('#one a').mouseenter(function () {
         console.log(this.id);
 
@@ -89,7 +125,7 @@ $(document).ready(function () {
 
 
             $(".box").append("<p>" + rubrics["0"].rubrics.concept) + "</p>";
-            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Brainstorming, visuele uitwerkingen voor D'n Blije Druktebelever" + "</p>" );
+            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Brainstorming, visuele uitwerkingen voor D'n Blije Druktebelever" + "</p>");
 
             $(".box").append('<p>' + rubrics["1"].rubrics.tests) + "</p>";
             $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:13px; padding-top: 0px;">' + "Concepttesting en User Experience testing voor de Heatmap" + "</p>");
@@ -134,46 +170,82 @@ $(document).ready(function () {
             $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:12px; padding-top: 0px;">' + "Data en cijfers interactief visualiseren" + "</p>");
 
             $(".box").append("<p>" + rubrics["2"].rubrics.programmeren) + "</p>";
-            $(".box").append('<p style = "border-bottom: solid whitesmoke 1px; font-size:12px; padding-top: 0px;">' + "Datasets uitlezen en deze met programmeren gebruiken" + "</p>");
+            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "Datasets uitlezen en deze met programmeren gebruiken" + "</p>");
 
-            
+
+
+        }
+        if (this.id == 'coderen') {
+
+
+            $(".box").append("<p>" + rubrics["2"].rubrics.programmeren) + "</p>";
+            $(".box").append('<p style = "font-size:12px; padding-top: 0px;">' + "HTML, CSS en Javascript, jQuery en andere libraries" + "</p>");
+
+
+
+        }
+        if (this.id == 'lockscreen') {
+
+            $(".box").append('<p style = "font-size:15px; padding-top: 0px;">' + "Mini project voor de fun" + "</p>");
+            $(".box").append('<p style = "font-size:20px; padding-top: 0px;">' + ": )" + "</p>");
+
+
+
 
         }
 
 
-       
-        $(".box").css("height", "auto");
-        $(".box").css("width", "auto");
-        $(".box").css("margin-left", "30%");
-          
-        $(".box").animate({marginLeft: "35%", opacity: "1", width: "auto"}, 100, "swing", function(){
-              
-              
-          });
-       // $(".box").fadeTo(100, 1);
-        
-      
-        });
+
+
+
+
+        if (!$('.box').is(':empty')) {
+            $('.box').show();
+            $(".box").css("height", "auto");
+            $(".box").css("width", "auto");
+            $(".box").css("margin-right", "23%");
+
+            $(".box").animate({
+                marginRight: "20%",
+                opacity: "1",
+                width: "auto"
+            }, 70, "swing", function () {
+                if ($('.box').is(':empty')) {
+                    $('.box').finish();
+                    // $('.box').hide();
+                }
+
+            });
+        }
+
+        // $(".box").fadeTo(100, 1);
+
+
+    });
 
 
     $('#one a').mouseleave(function () {
         console.log(this.id);
-        $(".box").animate({marginLeft: "37%", opacity: "0"}, 100, function(){
+        $(".box").animate({
+            marginRight: "17%",
+            opacity: "0"
+        }, 50, function () {
             $(".box").empty();
+            //$('.box').finish();
             $(".box").css("margin-left", "0");
             $(".box").css("height", "0");
             $(".box").css("width", "0");
-            
-            
+
+
         });
-        
-      /*  $(".box").fadeTo(100, 0,function(){
-            $(".box").empty();
-            
-        });*/
-        
-        
-        
+
+        /*  $(".box").fadeTo(100, 0,function(){
+              $(".box").empty();
+              
+          });*/
+
+
+
     });
 
 

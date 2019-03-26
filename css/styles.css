@@ -2,7 +2,8 @@
 
 html,
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto','Lato', sans-serif;
+    font-weight: 400;
     color: white;
     height: 100%;
     margin: 0;
@@ -17,6 +18,7 @@ audio {
 
 a {
     color: white;
+    
 }
 
 
@@ -27,7 +29,7 @@ a {
 
 h2 {
 
-    font-weight: 700;
+    font-weight: 400;
 }
 
 ul {
@@ -36,15 +38,14 @@ ul {
 
 img {
     display: block;
-    width: auto;
+    width: 100%;
     max-width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    vertical-align: middle;
+    margin: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
 
 }
 
@@ -161,7 +162,7 @@ html > body .content {
     overflow: hidden;
     height: auto;
     width: auto;
-    max-width: 36em;
+    max-width: 45%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -172,6 +173,9 @@ html > body .content {
 
 }
 
+.audio {
+ margin-bottom: 20px;
+}
 
 
 .title,
@@ -195,15 +199,41 @@ html > body .content {
     margin-top: 30px;
     margin-bottom: 50px;
     max-width: auto;
-
+    
 }
 
-.article h2, p, .linkText {
-
+.article h2, p{
+    
     padding: 10px;
     color: black
+    
 }
 
+
+.linkText  {
+    color: black;
+    border-left: 3px lightgrey solid;
+   display: block;
+    margin-left: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    
+}
+
+
+#fullscreen {
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    padding: 10px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    border:none;
+    color: white;
+}
 
 
 
@@ -246,44 +276,43 @@ html > body .content {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     
+    
 }
 
 .box {
-    position: absolute;
+    position: sticky;
     padding: 10px;
     width: 300px;
     height: auto;
     float: right;
     margin-top: 20px;
-    margin-left: 40%;
-    color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    margin-right: 20%;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.4), 0 6px 30px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
-    
-   
-    
-   
 }
 
-
+a img {
+    
+}
 .box p {
     
-    
+    color: white;
 }
 
 
 
 #one a {
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     display: block;
     margin-top: 100px;
     font-size: 24px;
     border-bottom: 3px solid white;
     padding-bottom: 2px;
     padding-top: 5px;
+    
 
 }
 
@@ -310,7 +339,7 @@ html > body .content {
 #two {
     overflow: hidden;
     background: linear-gradient(132deg, #13547a, #80d0c7);
-
+    
 }
 
 
@@ -420,7 +449,7 @@ html > body .content {
 
     #one a {
 
-        font-weight: 700;
+        font-weight: 400;
         display: block;
         margin-top: 40px;
         font-size: 24px;
@@ -484,7 +513,7 @@ html > body .content {
 
 @media only screen and (min-width: 1200px) {
     .article-bg {
-        width: 60%;
+        width: 100%;
         margin-left: 20%;
         margin-right: 20%;
     }
