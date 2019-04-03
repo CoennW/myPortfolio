@@ -2,7 +2,7 @@
 
 html,
 body {
-    font-family: 'Roboto','Lato', sans-serif;
+    font-family: 'Roboto', 'Lato', sans-serif;
     font-weight: 400;
     color: white;
     height: 100%;
@@ -18,7 +18,7 @@ audio {
 
 a {
     color: white;
-    
+
 }
 
 
@@ -45,7 +45,7 @@ img {
     margin: 10px;
     margin-bottom: 15px;
     margin-top: 15px;
-    
+
 
 }
 
@@ -162,7 +162,7 @@ html > body .content {
     overflow: hidden;
     height: auto;
     width: auto;
-    max-width: 45%;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
@@ -174,7 +174,7 @@ html > body .content {
 }
 
 .audio {
- margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -199,41 +199,88 @@ html > body .content {
     margin-top: 30px;
     margin-bottom: 50px;
     max-width: auto;
-    
+
 }
 
-.article h2, p{
-    
+.article h2,
+p {
+
     padding: 10px;
     color: black
-    
 }
 
 
-.linkText  {
+.linkText {
     color: black;
     border-left: 3px lightgrey solid;
-   display: block;
+    display: block;
     margin-left: 10px;
     padding-left: 10px;
     text-decoration: none;
     font-weight: bold;
-    
-    
+
+
 }
 
+.material-icons.md-24 {
+    font-size: 24px;
+}
 
-#fullscreen {
+.navigation {
     position: fixed;
-    right: 25px;
-    top: 25px;
+    right: 20px;
     padding: 10px;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
-    border:none;
+    width: auto:;
+
+    border-radius: 10px;
+    border: none;
     color: white;
+
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
 }
+
+#fullscreen:focus,
+#to_top:focus {
+    outline: none;
+}
+
+#fullscreen:hover,
+#to_top:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: none;
+    transform: scale(1.05);
+
+}
+
+#fullscreen:active,
+#to_top:active {
+    transform: scale(0.80);
+}
+
+.navigation,
+i {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+#fullscreen,
+#to_top {
+
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+
 
 
 
@@ -243,13 +290,27 @@ html > body .content {
 #one {
     overflow: hidden;
 
-    background: linear-gradient(to bottom right, #319CDA 0%, #29179A 100%);
+    background-image: linear-gradient(to bottom right, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
 
     /*animation*/
-    background-size: 300% 100%;
+    background-size: 150% 100%;
 
     animation: gradientAnimation 15s ease infinite;
-    
+
+    height: 100vh;
+
+}
+
+#oneSemester4 {
+    overflow: hidden;
+
+    background-image: linear-gradient(to bottom right, #09203f 0%, #537895 100%);
+
+    /*animation*/
+    background-size: 200% 100%;
+
+    animation: gradientAnimation 15s ease infinite;
+
     height: 100vh;
 
 }
@@ -267,7 +328,7 @@ html > body .content {
 
 #one .nav-vakken {
 
-    
+
     width: 50%;
     height: auto;
     display: inline-block;
@@ -275,8 +336,22 @@ html > body .content {
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    
-    
+
+
+}
+
+#oneSemester4 .nav-vakken {
+
+
+    width: 50%;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+
 }
 
 .box {
@@ -293,11 +368,10 @@ html > body .content {
     opacity: 0;
 }
 
-a img {
-    
-}
+a img {}
+
 .box p {
-    
+
     color: white;
 }
 
@@ -309,16 +383,35 @@ a img {
     display: block;
     margin-top: 100px;
     font-size: 24px;
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
     padding-bottom: 2px;
     padding-top: 5px;
-    
+
 
 }
 
 
 
 #one .nav-vakken a:nth-child(3) {
+    margin-top: 20px;
+}
+
+#oneSemester4 a {
+    text-decoration: none;
+    font-weight: 400;
+    display: block;
+    margin-top: 100px;
+    font-size: 24px;
+    border-bottom: 2px solid white;
+    padding-bottom: 2px;
+    padding-top: 5px;
+
+
+}
+
+
+
+#oneSemester4 .nav-vakken a:nth-child(3) {
     margin-top: 20px;
 }
 
@@ -339,7 +432,7 @@ a img {
 #two {
     overflow: hidden;
     background: linear-gradient(132deg, #13547a, #80d0c7);
-    
+
 }
 
 
@@ -438,28 +531,55 @@ a img {
     }
 
 
-
     .article-bg {
+        height: auto;
         width: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
+    
         margin-bottom: 0px;
         border-bottom-left-radius: 0px;
     }
 
-    #one a {
+    #one .nav-vakken {
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 90%;
+        
+        
+    }
+    
+     #oneSemester4 .nav-vakken {
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        width: 90%;
+        
+        
+    }
 
+
+    #one a {
+        
         font-weight: 400;
         display: block;
         margin-top: 40px;
-        font-size: 24px;
+        font-size: 18px;
+        width: auto;
+        border-bottom: solid 2px white;
 
     }
-    #one .nav-vakken {
-        padding-top: 175px;
-        margin-left: 5%;
-        margin-right: 5%;
+    
+      #oneSemester4 a {
+        
+        font-weight: 400;
+        display: block;
+        margin-top: 40px;
+        font-size: 18px;
+        width: auto;
+        border-bottom: solid 2px white;
+
     }
+    
 
     .top-bar h1 {
 
@@ -471,8 +591,9 @@ a img {
     }
 
     .article {
-        max-width: auto;
+
         line-height: 1.5;
+        width: auto;
     }
 
 
@@ -483,17 +604,23 @@ a img {
 
 @media only screen and (min-width: 600px) {
     .article-bg {
+
         width: 90%;
         margin-left: 5%;
         margin-right: 5%;
+
     }
+
+
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
     .article-bg {
-        width: 80%;
+
+        width: 70%;
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -503,7 +630,7 @@ a img {
 
 @media only screen and (min-width: 992px) {
     .article-bg {
-        width: 70%;
+        width: 40em;
         margin-left: 15%;
         margin-right: 15%;
     }
@@ -513,7 +640,7 @@ a img {
 
 @media only screen and (min-width: 1200px) {
     .article-bg {
-        width: 100%;
+        width: 50em;
         margin-left: 20%;
         margin-right: 20%;
     }

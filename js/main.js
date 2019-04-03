@@ -20,7 +20,7 @@ $(document).ready(function () {
             } else if (document.documentElement.webkitRequestFullscreen) {
                 document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             }
-            $('#fullscreen').html("Exit");
+            $('#fullscreen').html('<i class="material-icons">fullscreen_exit</i>');
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -31,7 +31,7 @@ $(document).ready(function () {
             } else if (document.webkitExitFullscreen) {
                 document.webkitExitFullscreen();
             }
-            $('#fullscreen').html("Go Fullscreen");
+            $('#fullscreen').html('<i class="material-icons">fullscreen</i>');
         }
     }
 
