@@ -198,7 +198,6 @@ $(document).ready(function () {
 
 
 
-
         if (!$('.box').is(':empty')) {
             $('.box').show();
             $(".box").css("height", "auto");

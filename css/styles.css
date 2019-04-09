@@ -41,11 +41,18 @@ img {
     width: 100%;
     max-width: 100%;
     height: auto;
+    max-height: 400px;
+    object-fit: cover;
     vertical-align: middle;
-    margin: 10px;
+    margin: 0px;
     margin-bottom: 15px;
     margin-top: 15px;
 
+}
+
+img:hover {
+    animation: imgClickIn ease 0.1s;
+    transform: scale(0.98);
 
 }
 
@@ -206,7 +213,7 @@ html > body .content {
 p {
 
     padding: 10px;
-    color: black
+    color: black;
 }
 
 
@@ -305,6 +312,7 @@ i {
     overflow: hidden;
 
     background-image: linear-gradient(to bottom right, #09203f 0%, #537895 200%);
+
 
     /*animation*/
     background-size: 200% 100%;
@@ -458,6 +466,15 @@ a img {}
 
 /* Animation Code */
 
+@keyframes imgClickIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.98);
+    }
+}
+
 @keyframes articleBrightnessIn {
     0 {
         filter: brightness(0.8);
@@ -534,7 +551,7 @@ a img {}
     .article-bg {
         height: auto;
         width: 100%;
-    
+
         margin-bottom: 0px;
         border-bottom-left-radius: 0px;
     }
@@ -544,22 +561,22 @@ a img {}
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 90%;
-        
-        
+
+
     }
-    
-     #oneSemester4 .nav-vakken {
+
+    #oneSemester4 .nav-vakken {
         top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         width: 90%;
-        
-        
+
+
     }
 
 
     #one a {
-        
+
         font-weight: 400;
         display: block;
         margin-top: 40px;
@@ -568,9 +585,9 @@ a img {}
         border-bottom: solid 2px white;
 
     }
-    
-      #oneSemester4 a {
-        
+
+    #oneSemester4 a {
+
         font-weight: 400;
         display: block;
         margin-top: 40px;
@@ -579,7 +596,7 @@ a img {}
         border-bottom: solid 2px white;
 
     }
-    
+
 
     .top-bar h1 {
 
