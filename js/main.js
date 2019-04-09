@@ -21,6 +21,7 @@ $(document).ready(function () {
                 document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             }
             $('#fullscreen').html('<i class="material-icons">fullscreen_exit</i>');
+            
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -60,7 +61,10 @@ $(document).ready(function () {
         arrows: false,
         toolbar: true,
         infobar: false,
-        buttons: ["close"]
+        buttons: ["close"],
+        animationEffect: "fade",
+        animationDuration: 400
+        
     });
 
 
