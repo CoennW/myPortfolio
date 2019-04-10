@@ -334,21 +334,9 @@ i {
 
 
 
-#one .nav-vakken {
 
 
-    width: 50%;
-    height: auto;
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-
-}
-
-#oneSemester4 .nav-vakken {
+.nav-vakken {
 
 
     width: 50%;
@@ -386,25 +374,10 @@ a img {}
 
 
 #one a {
-    text-decoration: none;
-    font-weight: 400;
-    display: block;
     margin-top: 70px;
-    font-size: 24px;
-    border-bottom: 2px solid white;
-    padding-bottom: 2px;
-    padding-top: 5px;
-
-
 }
 
-
-
-#one .nav-vakken a:nth-child(3) {
-    margin-top: 20px;
-}
-
-#oneSemester4 a {
+.nav-vakken a {
     text-decoration: none;
     font-weight: 400;
     display: block;
@@ -414,14 +387,13 @@ a img {}
     padding-bottom: 2px;
     padding-top: 5px;
 
-
 }
 
 
-
-#oneSemester4 .nav-vakken a:nth-child(3) {
+.nav-vakken a:nth-child(3) {
     margin-top: 20px;
 }
+
 
 .nav-vakken #semesters {
 
