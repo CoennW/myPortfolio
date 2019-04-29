@@ -24,9 +24,6 @@
     <link href="css/jquery.fancybox.min.css" rel="stylesheet">
     <script src="js/jquery.fancybox.min.js"></script>
 
-    <!-- Tilt -->
-
-
     <!-- Main Javascript -->
     <script src="js/main.js"></script>
 
@@ -44,16 +41,52 @@
 
         </nav>
     </div> -->
+
+
     <div class="navigation">
 
-        <button id="fullscreen"><i class="material-icons md-24">fullscreen</i></button>
+        <div class="menu-content">
+           <a href="#">
+            <button id="to_top">
+                <i class="material-icons md-24">person</i>
+            </button></a>
+            
+            <a href="portfolio.html">
+            <button id="to_top">
+            <i class="material-icons md-24">work</i>
+                </button></a>
+           
+           <a href="index.html">
+            <button id="to_top">
+        <p id="menu-s3"></p>
+        </button></a>
+           
+           <a href="semester4.html">
+            <button id="to_top">
+            <p id="menu-s4"></p>
+        </button></a>
+        </div>
+        
+        <button id="to_top" class="menu">
+                <i class="material-icons md-24">menu</i>
+        </button>
+
+
+
+
+
+
+        <button id="fullscreen">
+            <i class="material-icons md-24">fullscreen</i>
+        </button>
         <a href="#top"><button id="to_top"><i class="material-icons md-24">arrow_upward</i></button></a>
+
     </div>
 
-    <a id="top"></a>
 
 
-    <div class="content" id="oneSemester4">
+
+    <div class="content" id="one">
 
         <div class="wrapper">
 
@@ -61,27 +94,25 @@
             <div class="nav-vakken">
 
                 <h1>Coen Walter - ICT &amp; Media Design</h1>
-                <a id="semesters" href="index.html">Semester 3  &nbsp;|&nbsp;  </a>
-                <a id="semesters" href="semester4.html">Semester 4  &nbsp;|&nbsp;  </a>
+
+
+
+
                 <a id="semesters" href="#">Portfolio</a>
-                <a id="efteling" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#strategie">Development</a>
-                <a id="brandguide" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#user">User Experience</a>
-                <a id="aardgas" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#design">Strategie &#38; Concepting</a>
-                <a id="coderen" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#portfolio">Proftaak &#38; Professionele ontwikkeling</a>
+                <a id="semesters" href="#"></a>
+
+                
 
 
-
-
-
-
+                <a id="efteling" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#strategie">Coding Vanilla in HTML, CSS and Javascript</a>
+                <a id="brandguide" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#user">P1 Brandguide</a>
+                <a id="aardgas" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#design">Roadguard</a>
+                <a id="coderen" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#portfolio">Ongoing project: Nijdam Skate brand campagn</a>
+                <a id="coderen" data-tilt data-tilt-maxTilt="20" data-tilt-scale="1.02" data-tilt-easing="cubic-bezier(.03,.98,.52,.99)" data-tilt-perspective="3000" data-tilt-speed="200" data-tilt-axis="x" href="#portfolio">Ongoing project: The Art Department entrance</a>
 
             </div>
-           
-
 
         </div>
-
-
 
     </div>
 
@@ -91,7 +122,7 @@
 
             <a id="strategie"></a>
             <div class="title">
-                <h1>Development</h1>
+                <h1>Portfolio</h1>
             </div>
             <div class="article-bg">
                 <div class="article">
@@ -107,7 +138,7 @@
         <div class="content" id="bg-opacity">
             <a id="user"></a>
             <div class="title">
-                <h1>User Experience</h1>
+                <h1>P1 Brandguide</h1>
             </div>
             <div class="article-bg">
                 <div class="article">
@@ -125,7 +156,7 @@
         <div class="content" id="bg-opacity">
             <a id="design"></a>
             <div class="title">
-                <h1>Strategie &amp; Concepting</h1>
+                <h1>Roadguard</h1>
             </div>
             <div class="article-bg">
                 <div class="article">
@@ -138,27 +169,9 @@
         </div>
     </div>
 
-    <div class="content" id="five">
-        <div class="content" id="bg-opacity">
-            <a id="portfolio"></a>
-            <div class="title">
-                <h1>Proftaak</h1>
-            </div>
-            <div class="article-bg">
-                <div class="article">
 
 
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
+    <!-- Tilt -->
     <script src="js/tilt.jquery.min.js"></script>
 
 </body>

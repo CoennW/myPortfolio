@@ -239,7 +239,7 @@ p {
     padding: 10px;
     height: auto;
     width: auto:;
-
+    
     border-radius: 10px;
     border: none;
     color: white;
@@ -249,6 +249,40 @@ p {
     transform: translateY(-50%);
 
 }
+
+.menu-content {
+    position: absolute;
+    
+    right: 70px;
+    
+    display: none;
+    
+}
+
+#menu-s3 {
+    
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    color: white;
+    filter: brightness(0) invert(1);
+   
+    background: url("/img/icons/circle-three.png") no-repeat center center;
+    
+}
+
+#menu-s4 {
+    
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    color: white;
+    filter: brightness(0) invert(1);
+   
+    background: url("/img/icons/circle-four.png") no-repeat center center;
+    
+}
+
 
 #fullscreen:focus,
 #to_top:focus {
@@ -297,10 +331,10 @@ i {
 #one {
     overflow: hidden;
 
-    background-image: linear-gradient(to bottom right, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    background-image: linear-gradient(to bottom right, #09203f 0%, #537895 200%);
 
     /*animation*/
-    background-size: 150% 100%;
+    background-size: 200% 100%;
 
     animation: gradientAnimation 15s ease infinite;
 
@@ -364,7 +398,7 @@ i {
     opacity: 0;
 }
 
-a img {}
+
 
 .box p {
 
@@ -405,6 +439,16 @@ a img {}
 
 
 }
+
+
+    
+
+.menu-content a {
+   
+    text-decoration: none;
+}
+
+
 
 
 /* Second page with content */

@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(".box").css("opacity", "0");
     $(".box").css("height", "0");
     $(".box").css("width", "0");
+    
 
 
     //toggle fullscreen 
@@ -21,7 +22,7 @@ $(document).ready(function () {
                 document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
             }
             $('#fullscreen').html('<i class="material-icons">fullscreen_exit</i>');
-            
+
         } else {
             if (document.exitFullscreen) {
                 document.exitFullscreen();
@@ -64,7 +65,7 @@ $(document).ready(function () {
         buttons: ["close"],
         animationEffect: "fade",
         animationDuration: 400
-        
+
     });
 
 
@@ -253,7 +254,10 @@ $(document).ready(function () {
 
 
 
-
+$('.menu').click (function() {
+    $('.menu-content').fadeToggle(75);
+    
+});
 
 
 
