@@ -5,7 +5,7 @@ $(document).ready(function () {
     $(".box").css("opacity", "0");
     $(".box").css("height", "0");
     $(".box").css("width", "0");
-    
+
 
 
     //toggle fullscreen 
@@ -254,10 +254,21 @@ $(document).ready(function () {
 
 
 
-$('.menu').click (function() {
-    $('.menu-content').fadeToggle(75);
-    
-});
+    $('.menu').click(function () {
+        $('.menu-content').fadeToggle(75);
+
+    });
+
+
+    //typed.js set up
+    var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        loop: true,
+        loopCount: Infinity,
+        typeSpeed: 100,
+        fadeOut: true,
+        cursorChar: '|'
+    });
 
 
 

@@ -357,6 +357,19 @@ i {
 
 }
 
+#typed {
+    font-size: 80px;
+    font-weight: 600;
+       
+}
+
+.typed-cursor {
+    visibility: hidden;
+}
+
+
+
+
 .wrapper {
 
     margin-left: 5%;
@@ -448,7 +461,12 @@ i {
     text-decoration: none;
 }
 
-
+#intro-text {
+    color: white;
+    padding-left: 0px;
+    margin-bottom: 10px;
+    
+}
 
 
 /* Second page with content */
